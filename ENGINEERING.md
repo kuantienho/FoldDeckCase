@@ -33,3 +33,11 @@ For an ideal small-deflection cantilever, **F = 3 E I δ / L³** and **εmax ≈
 The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The designer reported a successful v1.5 print on October 20, 2026. Quantified testing of latch performance remains outstanding. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
 
 Useful next measurements are actual filament mass, complete print time, latch opening force, and the number of lid cycles before visible whitening or cracking.
+
+## Inner-lid signature revision
+
+The wordmark, including TM, measures 40.00 × 5.66 mm. Its XY bounds in the STEP coordinates are X = 83.339876–89.000000 mm and Y = −55.000000–−15.000000 mm. It is engraved from Z = 0.80 to 0.50 mm, leaving 0.50 mm of panel. Its footprint is outside the latch and fold bands.
+
+![Signature location and section](images/inner-lid-signature.png)
+
+The removed volume is approximately 28.64 mm³, consistent with the logo area multiplied by the 0.30 mm cut depth. The revised STEP remains one valid solid; its exported mesh is watertight. Bambu Studio successfully sliced and exported the checked project with the original print settings and seven layer heights. The signature revision has not yet been physically printed. The local section is thinner, so unchanged overall geometry does not imply identical local stiffness.

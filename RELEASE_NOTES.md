@@ -1,3 +1,19 @@
+# Basic v1.5 — metHOd signature revision
+
+Updated October 20, 2026.
+
+- Added a 40.00 × 5.66 mm inner-lid wordmark with enlarged TM.
+- Engraved 0.30 mm deep, leaving 0.50 mm beneath the mark.
+- Kept the outer envelope, folds, latches, and original fast-print settings.
+- Updated STEP and 3MF: `foldeckcasev1.5_metHOd`.
+- Checked valid single-solid CAD, watertight mesh, and successful Bambu Studio slicing/export.
+- Seven layers; total estimate 1 h 33 min 2 s, model estimate 1 h 26 min 7 s, material estimate 40.75 g.
+- Physical print validation is still pending for the engraved revision. The original v1.5 was successfully printed.
+
+The original `foldeckcasev1.5.step` and `.3mf` remain available for the previously printed, unsigned design. Third-party artwork is not included in this repository update.
+
+---
+
 # FoldDeckCase Basic v1.5
 
 A thin, single-piece card carrier that prints flat and folds into shape.

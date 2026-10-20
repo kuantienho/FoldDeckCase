@@ -2,7 +2,7 @@
 
 ## Reference setup
 
-Use the supplied Basic v1.5 3MF as a project in Bambu Studio. The reference machine is a Bambu Lab A1 with a 0.4 mm nozzle, PLA/PLA+, and a textured or matte build surface. Select the actual plate and material you use.
+Use the supplied Basic v1.5 signature-revision 3MF as a project in Bambu Studio. The reference machine is a Bambu Lab A1 with a 0.4 mm nozzle, PLA/PLA+, and a textured or matte build surface. Select the actual plate and material you use.
 
 Keep the outer face down and the fold reliefs up. Basic needs no supports. Preserve the saved diagonal placement at 100% scale: the unrotated net is 255 × 283 mm and the approximately 45-degree envelope is 254.86 × 254.86 mm, close to the nominal 256 mm bed size.
 
@@ -22,9 +22,13 @@ The first five layers preserve the thin hinges and latch patches. The thicker si
 
 The profile requests 350 mm/s internal solid infill. This is a requested speed, not the speed of every path: acceleration, cooling, and volumetric flow limits can reduce it. Keep the supplied profile as a baseline and change one variable at a time.
 
-Total slicer estimate: **1 h 33 min 9 s**, including the slicer's startup allowance. Model printing estimate: **1 h 25 min 20 s**. Filament estimate: **40.79 g**, using the saved material profile.
+Total slicer estimate: **1 h 33 min 2 s**, including the slicer's startup allowance. Model printing estimate: **1 h 26 min 7 s**. Filament estimate: **40.75 g**, using the saved material profile.
 
 <!-- MEDIA 04: Layer-preview screenshots showing both hinge layers and the seventh layer. -->
+
+## Inner-lid engraving
+
+The 40.00 × 5.66 mm metHOd mark is recessed 0.30 mm from the inner surface, leaving 0.50 mm of panel below it. Keep this face upward. The floor matches the top of layer 5; layers 6 and 7 form the recessed lettering without added supports. Inspect the small TM and letter counters in the preview. Slice success does not establish their physical print quality.
 
 ## Assembly
 

@@ -8,6 +8,9 @@ The current STEP defines a 255 × 283 × 0.80 mm flat envelope. Dimensions shown
 
 [Top SVG](images/engineering-top.svg) · [Front SVG](images/engineering-front.svg) · [Right SVG](images/engineering-side.svg)
 
+
+
+
 ## Thin panels and local flexibility
 
 The main panels are 0.80 mm thick. For a uniform panel, material volume scales linearly with thickness:
@@ -41,6 +44,9 @@ For the same material, width, and span, reducing thickness from 0.80 to 0.50 mm 
 
 This section is cut from the STEP at Y = −155 mm. The local details show the 0.80 mm panels and 0.30 mm minimum assembly-fold thickness. The full projection uses equal scales; the middle thickness plot is enlarged vertically.
 
+
+
+
 ## The two frequently operated fold bands
 
 The two consecutive upper lid folds use nominal 2.00 mm bands with 0.20 mm minimum thickness. Other assembly folds use nominal 1.00 mm bands with 0.30 mm minimum thickness.
@@ -70,6 +76,9 @@ The curve follows the geometric relations above, with a centered neutral surface
 ![Right projection and operating-fold sections](images/engineering-side.png)
 
 The section at X = 20 mm crosses both operating folds, F1 and F2. Their nominal 2.00 mm width is measured between panel boundaries; the curved transitions mean this is not automatically the active bending length L in the strain equation.
+
+
+
 
 ## Latch-root reliefs
 
@@ -103,6 +112,9 @@ These represent approximately 58% of the reference force and 69% of the referenc
 
 The relief circles replace sharp slit ends with finite-radius boundaries. They also remove material from the ligament, so a larger radius is not automatically better. The final geometry needs adequate remaining material and physical checks.
 
+
+
+
 ## Symbols and assumptions
 
 | Symbol | Meaning |
@@ -117,6 +129,9 @@ The relief circles replace sharp slit ends with finite-radius boundaries. They a
 
 The beam calculations assume uniform sections and small elastic deflections. Printed PLA is direction-dependent, and actual folding can involve large rotations and permanent deformation. Injection-molded living-hinge practice provides useful design context but does not establish fatigue performance for this FDM PLA case.
 
+
+
+
 ## Validation scope
 
 The designer reports that double-sleeved cards using Dragon Shield Standard Matte outer sleeves fit and work in the printed case. The inner-sleeve model, stack count, and measured clearance have not been specified; this does not establish a universal capacity or validate the latest engraving revision.
@@ -124,6 +139,9 @@ The designer reports that double-sleeved cards using Dragon Shield Standard Matt
 The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The designer reported a successful v1.5 print on October 20, 2026. Quantified testing of latch performance remains outstanding. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
 
 Useful next measurements are actual filament mass, complete print time, latch opening force, and the number of lid cycles before visible whitening or cracking.
+
+
+
 
 ## References and further reading
 

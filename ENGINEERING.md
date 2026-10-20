@@ -30,6 +30,6 @@ For an ideal small-deflection cantilever, **F = 3 E I δ / L³** and **εmax ≈
 
 ## Validation scope
 
-The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The latest root-relief changes still need a physical assembly test. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
+The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The designer reported a successful v1.5 print on October 20, 2026. Quantified testing of latch performance remains outstanding. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
 
 Useful next measurements are actual filament mass, complete print time, latch opening force, and the number of lid cycles before visible whitening or cracking.

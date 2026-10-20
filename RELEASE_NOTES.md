@@ -9,4 +9,6 @@ A thin, single-piece card carrier that prints flat and folds into shape.
 
 Open the 3MF as a project and check your printer, plate, and material before slicing. Keep the saved orientation and scale.
 
-Earlier prototypes were printed and assembled successfully. Physical testing of the latest v1.5 latch changes is pending. This release should be marked as a prerelease until that check is complete.
+Basic v1.5 was successfully printed, as reported by the designer on October 20, 2026. Earlier prototypes were also assembled successfully. No quantified fatigue, retention-force, or load rating is claimed.
+
+Included CAD-derived illustrations and animation explain the folding sequence. Flexible latch engagement is idealized; the animation is not a dynamic interference test.

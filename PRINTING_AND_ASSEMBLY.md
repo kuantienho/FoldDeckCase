@@ -30,11 +30,17 @@ Total slicer estimate: **1 h 33 min 9 s**, including the slicer's startup allowa
 
 1. Let the plate cool. Support the broad panels while releasing the sheet; avoid pulling on a thin fold band.
 2. Identify the fold bands with the grooved inner face up. Fold along the bands rather than across the panels.
-3. Raise the side panels and fold their return flaps inward. Bring the front panel into position and engage the two smaller hook-and-window pairs without forcing them.
-4. Fold the upper lid over the opening, bring its front flap down, and engage the larger closing hook with its matching window.
-5. Check that the panels sit evenly and that each latch can release without sharply bending its root.
+3. Raise the side and rear panels, then turn the side dust flaps inward.
+4. Raise the front panel, keeping the dust flaps inside.
+5. Fold the slotted side-return flaps inward.
+6. Fold the front flap and align its two smaller hooks with the side-return windows. Engage them gently.
+7. Close the outer lid and align its larger hook with the window in the front flap.
 
-<!-- MEDIA 05: Numbered assembly photos verified against the actual printed case. -->
+![Assembly sequence](images/assembly-guide.png)
+
+[Watch or download the MP4 animation](images/assembly.mp4).
+
+These CAD-derived views show an illustrative sequence using the actual panel shapes and thicknesses. Fold bands use an idealized bend model; elastic hook insertion is not simulated. Use the alignment and feel of the printed part to guide engagement.
 
 If a latch needs excessive force, stop and check the fold locations and window alignment. PLA may whiten, crack, or permanently crease when overstressed. The two operating lid bands should take the repeated folding; avoid repeatedly unfolding assembly-only corners.
 

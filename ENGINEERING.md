@@ -1,12 +1,22 @@
 # Engineering notes
 
+## Flat-part layout
+
+![Dimensioned top view](images/engineering-top.png)
+
+The current STEP defines a 255 × 283 × 0.80 mm flat envelope. Dimensions shown are nominal CAD values, not printer tolerances. F1 and F2 identify the two operating lid folds. Assembled clearance also depends on bend shape, panel overlap, and print variation.
+
+[Top SVG](images/engineering-top.svg) · [Front SVG](images/engineering-front.svg) · [Right SVG](images/engineering-side.svg)
+
 ## Thin panels and local flexibility
 
 The main panels are 0.80 mm thick. Keeping a large panel thin reduces material approximately in proportion to thickness: **V ≈ A t**, where A is panel area and t is thickness.
 
 For an ideal rectangular beam section, **I = b t³ / 12** and bending rigidity is E I. This cubic thickness dependence explains why reducing thickness everywhere can quickly make a panel much more flexible. FoldDeckCase instead uses local thin regions for folds and latches.
 
-<!-- MEDIA 06: Panel and hinge cross-section with dimensions beside the thickness equations. -->
+![Front projection and assembly-fold sections](images/engineering-front.png)
+
+This section is cut from the STEP at Y = −155 mm. The local details show the 0.80 mm panels and 0.30 mm minimum assembly-fold thickness. The full projection uses equal scales; the middle thickness plot is enlarged vertically.
 
 ## The two frequently operated fold bands
 
@@ -16,7 +26,9 @@ For ideal uniform bending, the outer-fiber strain can be approximated by **ε �
 
 These are geometric strain estimates, not allowable PLA strains or fatigue predictions. Printed strands, shoulder geometry, local creasing, and plastic deformation affect the real fold. A successful assembly does not establish repeated-cycle life.
 
-<!-- MEDIA 07: Fold-band side profile showing t, L, and bend angle. -->
+![Right projection and operating-fold sections](images/engineering-side.png)
+
+The section at X = 20 mm crosses both operating folds, F1 and F2. Their nominal 2.00 mm width is measured between panel boundaries; the curved transitions mean this is not automatically the active bending length L in the strain equation.
 
 ## Latch-root reliefs
 
@@ -33,11 +45,3 @@ For an ideal small-deflection cantilever, **F = 3 E I δ / L³** and **εmax ≈
 The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The designer reported a successful v1.5 print on October 20, 2026. Quantified testing of latch performance remains outstanding. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
 
 Useful next measurements are actual filament mass, complete print time, latch opening force, and the number of lid cycles before visible whitening or cracking.
-
-## Inner-lid signature revision
-
-The wordmark, including TM, measures 40.00 × 5.66 mm. Its XY bounds in the STEP coordinates are X = 83.339876–89.000000 mm and Y = −55.000000–−15.000000 mm. It is engraved from Z = 0.80 to 0.50 mm, leaving 0.50 mm of panel. Its footprint is outside the latch and fold bands.
-
-![Signature location and section](images/inner-lid-signature.png)
-
-The removed volume is approximately 28.64 mm³, consistent with the logo area multiplied by the 0.30 mm cut depth. The revised STEP remains one valid solid; its exported mesh is watertight. Bambu Studio successfully sliced and exported the checked project with the original print settings and seven layer heights. The signature revision has not yet been physically printed. The local section is thinner, so unchanged overall geometry does not imply identical local stiffness.

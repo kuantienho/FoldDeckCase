@@ -1,0 +1,8 @@
+{
+  "source_step": "cad/foldeckcasev1.5_metHOd.step",
+  "source_sha256": "cf5ab08670dc2c72dc9344edc9d55bedbf736c518001a80aa8c247086f240db5",
+  "hero": "Current CAD panels; idealized assembly bends, not a motion validation.",
+  "drawings": "Flat-part orthographic edge projections; actual STEP sections at Y=-155 and X=20 mm. Thickness plots have explicitly enlarged vertical scales. Local sections use equal axis scales.",
+  "units": "mm",
+  "updated": "2026-10-20"
+}

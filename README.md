@@ -10,9 +10,9 @@ FoldDeckCase is a thin, single-piece, 3D-printable card carrier that folds into 
 
 Printed flat. Assembled by folding. No separate hardware.
 
-![FoldDeckCase assembled CAD view](images/assembled-cad.png)
+![FoldDeckCase: flat printed sheet and assembled card carrier](images/flat-to-case.png)
 
-*CAD-derived illustration of Basic v1.5. Panel colors explain the construction; they do not indicate a multicolor print.*
+*The same one-piece design, before and after folding. Views use the current CAD geometry with idealized bends; colors distinguish panels, not filament changes.*
 
 <!-- OPTIONAL: Replace or supplement this render with a real assembled-product photo. -->
 
@@ -44,7 +44,7 @@ FoldDeckCase is a light-duty carrier. It is not rated for crushing, water protec
 
 ## Print Basic
 
-Start with **[foldeckcasev1.5_metHOd.3mf](print/foldeckcasev1.5_metHOd.3mf)** in Bambu Studio. This is the Basic v1.5 signature revision, with a recessed metHOd mark on the inner lid. It includes the flat placement and faster seven-layer setup. For design edits, download the **[STEP model](cad/foldeckcasev1.5_metHOd.step)**.
+Start with **[foldeckcasev1.5_metHOd.3mf](print/foldeckcasev1.5_metHOd.3mf)** in Bambu Studio. It includes the current Basic model, saved flat placement, and faster seven-layer setup. For design edits, download the **[STEP model](cad/foldeckcasev1.5_metHOd.step)**.
 
 1. Open the 3MF as a project to retain its settings.
 2. Confirm your printer, nozzle, build plate, and filament match your setup.
@@ -59,7 +59,7 @@ Read the [printing and assembly guide](docs/PRINTING_AND_ASSEMBLY.md) for the la
 
 [Download the assembly animation (MP4)](images/assembly.mp4) · [View the assembly sheet](images/assembly-guide.png)
 
-*The animation uses panels from the actual STEP file with idealized bending. It explains the folding sequence; it does not simulate elastic hook insertion or establish collision-free motion.*
+*The animation uses the original v1.5 panel geometry with idealized bending. The folding sequence remains applicable to the current model. It does not simulate elastic hook insertion or establish collision-free motion.*
 
 <!-- OPTIONAL: Add a real folding and closing video here. -->
 
@@ -76,7 +76,19 @@ The case prints as a flat net. Thin fold bands connect the panels, and three int
 | Flexible latch patches | 0.50 mm thickness |
 | Number of latch pairs | 3 |
 
-![Dimensioned Basic v1.5 layout](images/dimensioned-layout.png)
+### Dimensions and construction
+
+![Top view: dimensioned flat net](images/engineering-top.png)
+
+The flat net measures **255 × 283 mm**, with a **95 mm-wide central panel strip**. The panel dimensions exclude the narrow fold bands. These are flat-part dimensions, not a claimed assembled internal capacity.
+
+The three drawings separate the overall footprint from the thin cross-sections:
+
+- [Top view — panel layout and dimensions](images/engineering-top.png) · [Vector drawing](images/engineering-top.svg)
+- [Front view — width and assembly-fold sections](images/engineering-front.png) · [Vector drawing](images/engineering-front.svg)
+- [Right-side view — length and operating-fold sections](images/engineering-side.png) · [Vector drawing](images/engineering-side.svg)
+
+Full projections retain equal axis scales. The thickness plots are explicitly enlarged; local sections show the actual modeled shoulder curves.
 
 The lid's two frequently bent lines need different treatment from folds mainly used during assembly. Their thinner, wider bands distribute bending over more material length. The surrounding panels stay thicker to help the case retain its shape.
 
@@ -84,31 +96,13 @@ The latch slits extend toward the roots and end in rounded reliefs. This gives e
 
 Read the [engineering notes](docs/ENGINEERING.md) for dimensions, equations, and the limits of these simplified models.
 
-## Inner-lid maker signature
-
-The current download includes a recessed **metHOd** wordmark and enlarged TM on the inner face of the outer lid. It prints in the same color as the case.
-
-| Detail | Dimension |
-| --- | --- |
-| Overall mark, including TM | 40.00 × 5.66 mm |
-| Clearance from straight right edge | 6.00 mm |
-| Clearance from fold-band panel boundary | 12.00 mm |
-| Recess depth | 0.30 mm |
-| Remaining panel under the mark | 0.50 mm |
-
-![Dimensioned inner-lid maker signature](images/inner-lid-signature.png)
-
-The recess floor sits at Z = 0.50 mm, matching the fifth layer. The seven-layer schedule, assembly features, and outside envelope remain unchanged. Inspect the small TM in the sliced preview before printing.
-
-The assembly renders and animation above depict the original v1.5 without the signature; the folding sequence is unchanged.
-
 ## What has been tested?
 
 Earlier prototypes were physically printed and assembled successfully on an A1. The faster print setup and fold lines also worked in the designer's tests.
 
 **Basic v1.5 has now been successfully printed**, as reported by the designer on October 20, 2026. The STEP model has also been checked as a valid single solid, and the supplied project has been sliced successfully. The 93-minute duration and 40.79 g material use for that original version remain slicer estimates, not measured print results. No cycle-life or load rating is claimed.
 
-The **signature revision** adds a 0.30 mm-deep inner-lid mark. Its STEP is valid, its mesh is watertight, and its seven-layer project has been sliced successfully. Its updated estimates are **1 h 33 min 2 s and 40.75 g**. This engraved revision has **not yet been physically print-tested**; the successful print above refers to the original v1.5.
+The current download has a valid single-solid STEP, a watertight mesh, and a successfully sliced seven-layer project. Updated estimates are **1 h 33 min 2 s and 40.75 g**. Physical print confirmation applies to the earlier v1.5; the latest revision is still awaiting its own print test. See the [release notes](docs/RELEASE_NOTES.md) for the change history.
 
 ## Share your build
 

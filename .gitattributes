@@ -1,0 +1,8 @@
+*.md text eol=lf
+*.json text eol=lf
+LICENSE text eol=lf
+*.step binary
+*.3mf binary
+*.png binary
+*.gif binary
+*.mp4 binary

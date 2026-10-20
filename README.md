@@ -10,9 +10,13 @@ FoldDeckCase is a thin, single-piece, 3D-printable card carrier that folds into 
 
 Printed flat. Assembled by folding. No separate hardware.
 
-<!-- MEDIA 01: Main photo of the assembled Basic case beside its flat printed sheet. Leave empty until available. -->
+![FoldDeckCase assembled CAD view](images/assembled-cad.png)
 
-**1 plate · 1 piece · 7 layers · ~1.5 hours · ~41 g**
+*CAD-derived illustration of Basic v1.5. Panel colors explain the construction; they do not indicate a multicolor print.*
+
+<!-- OPTIONAL: Replace or supplement this render with a real assembled-product photo. -->
+
+**One plate · One piece · Seven layers · 93-minute print estimate · 41 g filament estimate**
 
 ## Why FoldDeckCase?
 
@@ -51,7 +55,13 @@ The reference setup is a **Bambu Lab A1, 0.4 mm nozzle, and PLA/PLA+**. The shee
 
 Read the [printing and assembly guide](docs/PRINTING_AND_ASSEMBLY.md) for the layer schedule and folding notes.
 
-<!-- MEDIA 02: Short real-time folding and closing video. Leave empty until available. -->
+![Illustrated folding sequence](images/assembly.gif)
+
+[Download the assembly animation (MP4)](images/assembly.mp4) · [View the assembly sheet](images/assembly-guide.png)
+
+*The animation uses panels from the actual STEP file with idealized bending. It explains the folding sequence; it does not simulate elastic hook insertion or establish collision-free motion.*
+
+<!-- OPTIONAL: Add a real folding and closing video here. -->
 
 ## How the design works
 
@@ -66,7 +76,7 @@ The case prints as a flat net. Thin fold bands connect the panels, and three int
 | Flexible latch patches | 0.50 mm thickness |
 | Number of latch pairs | 3 |
 
-<!-- MEDIA 03: Dimensioned top view of the actual v1.5 net, with the two operating fold bands identified. -->
+![Dimensioned Basic v1.5 layout](images/dimensioned-layout.png)
 
 The lid's two frequently bent lines need different treatment from folds mainly used during assembly. Their thinner, wider bands distribute bending over more material length. The surrounding panels stay thicker to help the case retain its shape.
 
@@ -78,7 +88,7 @@ Read the [engineering notes](docs/ENGINEERING.md) for dimensions, equations, and
 
 Earlier prototypes were physically printed and assembled successfully on an A1. The faster print setup and fold lines also worked in the designer's tests.
 
-**Basic v1.5 adds revised latch-root reliefs.** Its STEP model has been checked as a valid single solid, and its print project has been sliced successfully. Physical confirmation of these latest latch changes is still pending; no cycle-life or load rating is claimed.
+**Basic v1.5 has now been successfully printed**, as reported by the designer on October 20, 2026. The STEP model has also been checked as a valid single solid, and the supplied project has been sliced successfully. The 93-minute duration and 40.79 g material use remain slicer estimates, not measured print results. No cycle-life or load rating is claimed.
 
 ## Share your build
 

@@ -1,0 +1,10 @@
+{
+  "source": "outputs\\foldeckcase_v1.5\\foldeckcasev1.5.step",
+  "sha256": "2cb57bbd1b0c0dd916f718a0029ad1fbb7584e3f226331bfc29729bf02e1c53e",
+  "geometry": "Panels clipped from actual v1.5 STEP, preserving panel thickness and latch details.",
+  "motion": "Finite-width, constant-arc neutral-band bending; dust flaps tuck to 94 degrees, other folds 90 degrees. Shoulders and flexible latch insertion idealized.",
+  "validation": "Illustrative sequence only. No dynamic intersection test or PLA material simulation performed.",
+  "user_report": "User confirmed v1.5 printed successfully on 2026-10-20.",
+  "frames": 178,
+  "fps": 12
+}

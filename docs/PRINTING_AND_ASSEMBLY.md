@@ -44,4 +44,4 @@ These CAD-derived views show an illustrative sequence using the actual panel sha
 
 If a latch needs excessive force, stop and check the fold locations and window alignment. PLA may whiten, crack, or permanently crease when overstressed. The two operating lid bands should take the repeated folding; avoid repeatedly unfolding assembly-only corners.
 
-Record card fit using actual card and sleeve dimensions. A universal card capacity has not been established.
+The designer reports successful use with double-sleeved cards using Dragon Shield sleeves. The exact sleeve combination and tested card count were not recorded. Check your own stack without forcing the closure; a universal card capacity has not been established.

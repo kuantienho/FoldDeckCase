@@ -98,6 +98,8 @@ Read the [engineering notes](docs/ENGINEERING.md) for dimensions, equations, and
 
 ## What has been tested?
 
+**Card fit:** the designer has tested double-sleeved cards using Dragon Shield sleeves and reports that they fit and work in the printed case. The exact inner/outer sleeve combination and card count were not recorded, so this is a fit report rather than a rated capacity or a guarantee for every sleeve combination.
+
 Earlier prototypes were physically printed and assembled successfully on an A1. The faster print setup and fold lines also worked in the designer's tests.
 
 **Basic v1.5 has now been successfully printed**, as reported by the designer on October 20, 2026. The STEP model has also been checked as a valid single solid, and the supplied project has been sliced successfully. The 93-minute duration and 40.79 g material use for that original version remain slicer estimates, not measured print results. No cycle-life or load rating is claimed.

@@ -98,7 +98,7 @@ Read the [engineering notes](docs/ENGINEERING.md) for dimensions, equations, and
 
 ## What has been tested?
 
-**Card fit:** the designer has tested double-sleeved cards using Dragon Shield sleeves and reports that they fit and work in the printed case. The exact inner/outer sleeve combination and card count were not recorded, so this is a fit report rather than a rated capacity or a guarantee for every sleeve combination.
+**Card fit:** the designer has tested double-sleeved cards using Dragon Shield Standard Matte outer sleeves and reports that they fit and work in the printed case. The inner-sleeve model and card count have not been specified, so this is a fit report rather than a rated capacity or a guarantee for every sleeve combination.
 
 Earlier prototypes were physically printed and assembled successfully on an A1. The faster print setup and fold lines also worked in the designer's tests.
 

@@ -10,9 +10,28 @@ The current STEP defines a 255 × 283 × 0.80 mm flat envelope. Dimensions shown
 
 ## Thin panels and local flexibility
 
-The main panels are 0.80 mm thick. Keeping a large panel thin reduces material approximately in proportion to thickness: **V ≈ A t**, where A is panel area and t is thickness.
+The main panels are 0.80 mm thick. For a uniform panel, material volume scales linearly with thickness:
 
-For an ideal rectangular beam section, **I = b t³ / 12** and bending rigidity is E I. This cubic thickness dependence explains why reducing thickness everywhere can quickly make a panel much more flexible. FoldDeckCase instead uses local thin regions for folds and latches.
+$$
+V = A t .
+$$
+
+Here, $A$ is panel area and $t$ is thickness.
+
+For an ideal rectangular beam section, the second moment of area and flexural rigidity are
+
+$$
+I = \frac{b t^3}{12}, \qquad EI = E\,\frac{b t^3}{12}.
+$$
+
+Here, $b$ is section width and $E$ is Young's modulus. The units of $I$ and $EI$ are $\mathrm{mm}^4$ and $\mathrm{N}\cdot\mathrm{mm}^2$, respectively. This cubic thickness dependence explains why reducing thickness everywhere can quickly make a panel more flexible. FoldDeckCase instead uses local thin regions for folds and latches.
+
+For equal material, width, and span, relative to $t_0 = 0.80\,\mathrm{mm}$,
+
+$$
+\frac{V}{V_0} = \frac{t}{t_0}, \qquad
+\frac{EI}{EI_0} = \left(\frac{t}{t_0}\right)^3.
+$$
 
 ![Thickness versus material and bending rigidity](images/principle-thickness.png)
 
@@ -26,13 +45,27 @@ This section is cut from the STEP at Y = −155 mm. The local details show the 0
 
 The two consecutive upper lid folds use nominal 2.00 mm bands with 0.20 mm minimum thickness. Other assembly folds use nominal 1.00 mm bands with 0.30 mm minimum thickness.
 
-For ideal uniform bending, the outer-fiber strain can be approximated by **ε ≈ t θ / (2 L)**, where θ is in radians and L is the active bending length. A 0.20 mm band bent through 90 degrees over 2.00 mm gives roughly **7.85%**. If bending is concentrated into 1.50 mm, the same expression gives about **10.47%**.
+For uniform-curvature bending with a centered neutral surface,
+
+$$
+R = \frac{L}{\theta}, \qquad
+\varepsilon \approx \frac{t}{2R} = \frac{t\theta}{2L}.
+$$
+
+Here, $\theta$ is the bend angle in radians and $L$ is the active bending length. For $t = 0.20\,\mathrm{mm}$ and $\theta = \frac{\pi}{2}$,
+
+$$
+\begin{aligned}
+L=2.00\,\mathrm{mm}:\quad \varepsilon &\approx \frac{0.20\left(\frac{\pi}{2}\right)}{2(2.00)} = 0.0785 = 7.85\%,\\
+L=1.50\,\mathrm{mm}:\quad \varepsilon &\approx \frac{0.20\left(\frac{\pi}{2}\right)}{2(1.50)} = 0.1047 = 10.47\%.
+\end{aligned}
+$$
 
 These are geometric strain estimates, not allowable PLA strains or fatigue predictions. Printed strands, shoulder geometry, local creasing, and plastic deformation affect the real fold. A successful assembly does not establish repeated-cycle life.
 
 ![Uniform-curvature fold strain illustration](images/principle-fold-strain.png)
 
-The curve follows the geometric relation R = L/θ and ε ≈ t/(2R), with a centered neutral surface. It illustrates why a sharp crease concentrates deformation. It is not a material allowable-strain curve.
+The curve follows the geometric relations above, with a centered neutral surface. It illustrates why a sharp crease concentrates deformation. It is not a material allowable-strain curve.
 
 ![Right projection and operating-fold sections](images/engineering-side.png)
 
@@ -44,11 +77,27 @@ All three hooks retain their tip and window locations. Each of the six slit endp
 
 The surrounding 0.50 mm-thick flexible patches have square perimeter transitions in this version. The large patch is 24.00 × 11.50 mm; each smaller patch is 16.00 × 9.90 mm.
 
-For an ideal small-deflection cantilever, **F = 3 E I δ / L³** and **εmax ≈ 3 t δ / (2 L²)**. At a fixed opening displacement δ, increasing active length L reduces the required force and root strain. Rounded slit ends remove sharp geometric tips, but these equations do not capture the actual large-deflection latch contact or establish its strength.
+For a uniform, end-loaded cantilever under small elastic deflections,
+
+$$
+\delta = \frac{F L^3}{3EI}, \qquad
+F = \frac{3EI}{L^3}\,\delta, \qquad
+\varepsilon_{\max} \approx \frac{3t\delta}{2L^2}.
+$$
+
+The symbol $\delta$ denotes tip displacement, not stress or strain. At a fixed opening displacement, increasing the active length $L$ reduces the required force and root strain. Rounded slit ends remove sharp geometric tips, but these equations do not capture the actual large-deflection latch contact or establish its strength.
 
 ![Latch active-length comparison](images/principle-latch.png)
 
-As an illustrative ratio, increasing active length by 20% gives 1/1.2³ ≈ 58% of the original force and 1/1.2² ≈ 69% of the original root strain, at the same imposed tip displacement. This is not a measured improvement for this case: the +0.80 mm slit change does not by itself establish the effective length increase.
+At the same imposed tip displacement, a 20% increase in active length gives
+
+$$
+\frac{F}{F_0}=\left(\frac{L_0}{L}\right)^3=\frac{1}{1.2^3}\approx0.579,
+\qquad
+\frac{\varepsilon_{\max}}{\varepsilon_{\max,0}}=\left(\frac{L_0}{L}\right)^2=\frac{1}{1.2^2}\approx0.694.
+$$
+
+These represent approximately 58% of the reference force and 69% of the reference root strain. This is not a measured improvement for this case: the +0.80 mm slit change does not by itself establish the effective length increase.
 
 ![Actual large and small latch outlines](images/latch-cad-details.png)
 
@@ -58,13 +107,13 @@ The relief circles replace sharp slit ends with finite-radius boundaries. They a
 
 | Symbol | Meaning |
 | --- | --- |
-| A, V | Panel area and volume |
-| b, t | Beam width and bending thickness |
-| E, I | Elastic modulus and second moment of area |
-| L, L₀ | Active bending length and reference length |
-| θ, R | Bend angle in radians and neutral-surface radius |
-| δ, F | Imposed tip displacement and corresponding force |
-| ε | Surface strain |
+| $A$, $V$ | Panel area and volume |
+| $b$, $t$ | Beam width and bending thickness |
+| $E$, $I$ | Elastic modulus and second moment of area |
+| $L$, $L_0$ | Active bending length and reference length |
+| $\theta$, $R$ | Bend angle in radians and neutral-surface radius |
+| $\delta$, $F$ | Imposed tip displacement and corresponding force |
+| $\varepsilon$ | Surface strain |
 
 The beam calculations assume uniform sections and small elastic deflections. Printed PLA is direction-dependent, and actual folding can involve large rotations and permanent deformation. Injection-molded living-hinge practice provides useful design context but does not establish fatigue performance for this FDM PLA case.
 

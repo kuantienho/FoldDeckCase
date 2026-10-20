@@ -12,6 +12,8 @@ FoldDeckCase is a thin, single-piece, 3D-printable card carrier that folds into 
 
 Printed flat. Assembled by folding. No separate hardware.
 
+<br>
+
 ![FoldDeckCase: flat printed sheet and assembled card carrier](images/flat-to-case.png)
 
 *The same one-piece design, before and after folding. Views use the current CAD geometry with idealized bends; colors distinguish panels, not filament changes.*
@@ -19,6 +21,8 @@ Printed flat. Assembled by folding. No separate hardware.
 <!-- OPTIONAL: Replace or supplement this render with a real assembled-product photo. -->
 
 **One plate · One piece · Seven layers · 93-minute print estimate · 41 g filament estimate**
+
+<br><br>
 
 ## Why FoldDeckCase?
 
@@ -30,6 +34,8 @@ Printed flat. Assembled by folding. No separate hardware.
 - **No supports for Basic.** Print the plain version with its outer surface against the build plate.
 
 Time and weight are slicer estimates for the included profile, not guaranteed measurements. Material, printer setup, and settings affect results.
+
+<br><br>
 
 ## When you just need a card carrier
 
@@ -44,6 +50,8 @@ Sometimes you need somewhere to put cards after a purchase, a lightweight carrie
 
 FoldDeckCase is a light-duty carrier. It is not rated for crushing, water protection, or long-term hinge fatigue. Check the fit with your own cards and sleeves.
 
+<br><br>
+
 ## Print Basic
 
 Start with **[foldeckcasev1.5_metHOd.3mf](print/foldeckcasev1.5_metHOd.3mf)** in Bambu Studio. It includes the current Basic model, saved flat placement, and faster seven-layer setup. For design edits, download the **[STEP model](cad/foldeckcasev1.5_metHOd.step)**.
@@ -57,6 +65,8 @@ The reference setup is a **Bambu Lab A1, 0.4 mm nozzle, and PLA/PLA+**. The shee
 
 Read the [printing and assembly guide](docs/PRINTING_AND_ASSEMBLY.md) for the layer schedule and folding notes.
 
+<br>
+
 ![Illustrated folding sequence](images/assembly.gif)
 
 [Download the assembly animation (MP4)](images/assembly.mp4) · [View the assembly sheet](images/assembly-guide.png)
@@ -64,6 +74,8 @@ Read the [printing and assembly guide](docs/PRINTING_AND_ASSEMBLY.md) for the la
 *The animation uses the original v1.5 panel geometry with idealized bending. The folding sequence remains applicable to the current model. It does not simulate elastic hook insertion or establish collision-free motion.*
 
 <!-- OPTIONAL: Add a real folding and closing video here. -->
+
+<br><br>
 
 ## How the design works
 
@@ -79,6 +91,8 @@ The case prints as a flat net. Thin fold bands connect the panels, and three int
 | Number of latch pairs | 3 |
 
 ### Dimensions and construction
+
+<br>
 
 ![Top view: dimensioned flat net](images/engineering-top.png)
 
@@ -98,12 +112,15 @@ The latch slits extend toward the roots and end in rounded reliefs. This gives e
 
 Read the [engineering notes](docs/ENGINEERING.md) for dimensions, equations, and the limits of these simplified models.
 
+<br><br>
+
 ## Engineering principles
 
 The following models explain the design choices. They describe geometric and elastic trends; they are not measured load ratings or fatigue-life predictions.
 
-### Panel thickness and local flexibility
+<br><br>
 
+### Panel thickness and local flexibility
 
 The main panels are 0.80 mm thick. For a uniform panel, material volume scales linearly with thickness:
 
@@ -128,13 +145,19 @@ $$
 \frac{EI}{EI_0} = \left(\frac{t}{t_0}\right)^3.
 $$
 
+<br>
+
 ![Thickness versus material and bending rigidity](images/principle-thickness.png)
 
 For the same material, width, and span, reducing thickness from 0.80 to 0.50 mm retains 62.5% of material per unit area but only about 24.4% of the ideal beam rigidity. This supports using localized flexible patches while retaining thicker panels. Rigidity means resistance to bending, not fracture strength.
 
+<br>
+
 ![Front projection and assembly-fold sections](images/engineering-front.png)
 
 This section is cut from the STEP at Y = −155 mm. The local details show the 0.80 mm panels and 0.30 mm minimum assembly-fold thickness. The full projection uses equal scales; the middle thickness plot is enlarged vertically.
+
+<br><br>
 
 ### The two frequently operated fold bands
 
@@ -158,13 +181,19 @@ $$
 
 These are geometric strain estimates, not allowable PLA strains or fatigue predictions. Printed strands, shoulder geometry, local creasing, and plastic deformation affect the real fold. A successful assembly does not establish repeated-cycle life.
 
+<br>
+
 ![Uniform-curvature fold strain illustration](images/principle-fold-strain.png)
 
 The curve follows the geometric relations above, with a centered neutral surface. It illustrates why a sharp crease concentrates deformation. It is not a material allowable-strain curve.
 
+<br>
+
 ![Right projection and operating-fold sections](images/engineering-side.png)
 
 The section at X = 20 mm crosses both operating folds, F1 and F2. Their nominal 2.00 mm width is measured between panel boundaries; the curved transitions mean this is not automatically the active bending length L in the strain equation.
+
+<br><br>
 
 ### Latch-root reliefs
 
@@ -182,6 +211,8 @@ $$
 
 The symbol $\delta$ denotes tip displacement, not stress or strain. At a fixed opening displacement, increasing the active length $L$ reduces the required force and root strain. Rounded slit ends remove sharp geometric tips, but these equations do not capture the actual large-deflection latch contact or establish its strength.
 
+<br>
+
 ![Latch active-length comparison](images/principle-latch.png)
 
 At the same imposed tip displacement, a 20% increase in active length gives
@@ -194,9 +225,13 @@ $$
 
 These represent approximately 58% of the reference force and 69% of the reference root strain. This is not a measured improvement for this case: the +0.80 mm slit change does not by itself establish the effective length increase.
 
+<br>
+
 ![Actual large and small latch outlines](images/latch-cad-details.png)
 
 The relief circles replace sharp slit ends with finite-radius boundaries. They also remove material from the ligament, so a larger radius is not automatically better. The final geometry needs adequate remaining material and physical checks.
+
+<br><br>
 
 ### Symbols and assumptions
 
@@ -212,14 +247,17 @@ The relief circles replace sharp slit ends with finite-radius boundaries. They a
 
 The beam calculations assume uniform sections and small elastic deflections. Printed PLA is direction-dependent, and actual folding can involve large rotations and permanent deformation. Injection-molded living-hinge practice provides useful design context but does not establish fatigue performance for this FDM PLA case.
 
-### References
+<br><br>
 
+### References
 
 - [MIT OpenCourseWare — Structural Mechanics, Recitation 5](https://ocw.mit.edu/courses/2-080j-structural-mechanics-fall-2013/de27f1d8f647ff995771d4b8d48d34bc_MIT2_080JF13_Recitation5.pdf): rectangular-section second moment of area and end-loaded cantilever deflection.
 - [Protolabs — How to Design 3D-Printed Living Hinges](https://www.protolabs.com/resources/blog/how-to-design-3d-printed-living-hinges/): process and material considerations for printed hinges.
 - [Protolabs — Designing Living Hinges That Fold Flat](https://www.protolabs.com/resources/design-tips/designing-living-hinges-that-fold-flat/): injection-molding context; its material and process recommendations are not validation of this PLA print.
 
 The plots are original illustrations calculated from the equations above. Latch outlines and the engineering sections are derived from the project STEP. No referenced source has tested or endorsed FoldDeckCase.
+
+<br><br>
 
 ## What has been tested?
 
@@ -231,11 +269,15 @@ Earlier prototypes were physically printed and assembled successfully on an A1. 
 
 The current download has a valid single-solid STEP, a watertight mesh, and a successfully sliced seven-layer project. Updated estimates are **1 h 33 min 2 s and 40.75 g**. Physical print confirmation applies to the earlier v1.5; the latest revision is still awaiting its own print test. See the [release notes](docs/RELEASE_NOTES.md) for the change history.
 
+<br><br>
+
 ## Share your build
 
 Printed one? Share a photo and tell us your material, printer settings, card and sleeve size, and how the folds and latches behaved. Reports of awkward assembly or wear are especially useful for improving the design.
 
 If this project is useful, a GitHub star helps other makers find it.
+
+<br><br>
 
 ## License and reuse
 

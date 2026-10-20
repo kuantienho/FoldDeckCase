@@ -1,12 +1,18 @@
 # Engineering notes
 
+<br><br>
+
 ## Flat-part layout
+
+<br>
 
 ![Dimensioned top view](../images/engineering-top.png)
 
 The current STEP defines a 255 × 283 × 0.80 mm flat envelope. Dimensions shown are nominal CAD values, not printer tolerances. F1 and F2 identify the two operating lid folds. Assembled clearance also depends on bend shape, panel overlap, and print variation.
 
 [Top SVG](../images/engineering-top.svg) · [Front SVG](../images/engineering-front.svg) · [Right SVG](../images/engineering-side.svg)
+
+<br><br>
 
 ## Thin panels and local flexibility
 
@@ -33,13 +39,19 @@ $$
 \frac{EI}{EI_0} = \left(\frac{t}{t_0}\right)^3.
 $$
 
+<br>
+
 ![Thickness versus material and bending rigidity](../images/principle-thickness.png)
 
 For the same material, width, and span, reducing thickness from 0.80 to 0.50 mm retains 62.5% of material per unit area but only about 24.4% of the ideal beam rigidity. This supports using localized flexible patches while retaining thicker panels. Rigidity means resistance to bending, not fracture strength.
 
+<br>
+
 ![Front projection and assembly-fold sections](../images/engineering-front.png)
 
 This section is cut from the STEP at Y = −155 mm. The local details show the 0.80 mm panels and 0.30 mm minimum assembly-fold thickness. The full projection uses equal scales; the middle thickness plot is enlarged vertically.
+
+<br><br>
 
 ## The two frequently operated fold bands
 
@@ -63,13 +75,19 @@ $$
 
 These are geometric strain estimates, not allowable PLA strains or fatigue predictions. Printed strands, shoulder geometry, local creasing, and plastic deformation affect the real fold. A successful assembly does not establish repeated-cycle life.
 
+<br>
+
 ![Uniform-curvature fold strain illustration](../images/principle-fold-strain.png)
 
 The curve follows the geometric relations above, with a centered neutral surface. It illustrates why a sharp crease concentrates deformation. It is not a material allowable-strain curve.
 
+<br>
+
 ![Right projection and operating-fold sections](../images/engineering-side.png)
 
 The section at X = 20 mm crosses both operating folds, F1 and F2. Their nominal 2.00 mm width is measured between panel boundaries; the curved transitions mean this is not automatically the active bending length L in the strain equation.
+
+<br><br>
 
 ## Latch-root reliefs
 
@@ -87,6 +105,8 @@ $$
 
 The symbol $\delta$ denotes tip displacement, not stress or strain. At a fixed opening displacement, increasing the active length $L$ reduces the required force and root strain. Rounded slit ends remove sharp geometric tips, but these equations do not capture the actual large-deflection latch contact or establish its strength.
 
+<br>
+
 ![Latch active-length comparison](../images/principle-latch.png)
 
 At the same imposed tip displacement, a 20% increase in active length gives
@@ -99,9 +119,13 @@ $$
 
 These represent approximately 58% of the reference force and 69% of the reference root strain. This is not a measured improvement for this case: the +0.80 mm slit change does not by itself establish the effective length increase.
 
+<br>
+
 ![Actual large and small latch outlines](../images/latch-cad-details.png)
 
 The relief circles replace sharp slit ends with finite-radius boundaries. They also remove material from the ligament, so a larger radius is not automatically better. The final geometry needs adequate remaining material and physical checks.
+
+<br><br>
 
 ## Symbols and assumptions
 
@@ -117,6 +141,8 @@ The relief circles replace sharp slit ends with finite-radius boundaries. They a
 
 The beam calculations assume uniform sections and small elastic deflections. Printed PLA is direction-dependent, and actual folding can involve large rotations and permanent deformation. Injection-molded living-hinge practice provides useful design context but does not establish fatigue performance for this FDM PLA case.
 
+<br><br>
+
 ## Validation scope
 
 The designer reports that double-sleeved cards using Dragon Shield Standard Matte outer sleeves fit and work in the printed case. The inner-sleeve model, stack count, and measured clearance have not been specified; this does not establish a universal capacity or validate the latest engraving revision.
@@ -124,6 +150,8 @@ The designer reports that double-sleeved cards using Dragon Shield Standard Matt
 The v1.5 STEP file is a valid single solid and its mesh and seven-layer print project have been checked. Earlier printed prototypes and the faster print approach worked in the designer's tests. The designer reported a successful v1.5 print on October 20, 2026. Quantified testing of latch performance remains outstanding. No quantified drop, crush, retention-force, or hinge-fatigue results are available.
 
 Useful next measurements are actual filament mass, complete print time, latch opening force, and the number of lid cycles before visible whitening or cracking.
+
+<br><br>
 
 ## References and further reading
 
